@@ -1,0 +1,19 @@
+<div class="">
+  <div class="row">
+    <div class="col-3" *ngFor="let account of accounts" appHover style="padding: 4%">
+
+        <div class="card bg-dark text-white-50" style="width: 140%;">
+          <img class="card-img-top" [src]="account.image" alt="Card image cap">
+          <div class="card-body">
+            <div class="card-img-overlay">
+                <h5 class="card-title d-none d-lg-inline">{{account.th}}</h5>
+            </div>
+            <p class="card-text d-none d-lg-inline ">Price: {{account.price}} </p><br>
+            <br>
+            <a href="" class="btn btn-success hovered">Buy</a>
+          </div>
+        </div>
+
+    </div>
+  </div>
+</div>
