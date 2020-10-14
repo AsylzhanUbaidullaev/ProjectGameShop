@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-
+  toggle = false
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  toggleMM() {
+    this.toggle = !this.toggle
+  }
 }

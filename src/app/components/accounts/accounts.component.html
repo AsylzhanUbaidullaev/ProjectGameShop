@@ -1,4 +1,14 @@
-<div class="">
+<span *ngFor="let acc of accounts | search:searchAcc" [account]="acc">
+  <form class="form-inline mt-2 mt-md-0">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search account" aria-label="Search" [(ngModel)]="searchAcc">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</span>
+
+
+
+
+
   <div class="row">
     <div class="col-3" *ngFor="let account of accounts" appHover style="padding: 4%">
 
@@ -10,10 +20,10 @@
             </div>
             <p class="card-text d-none d-lg-inline ">Price: {{account.price}} </p><br>
             <br>
-            <a href="" class="btn btn-success hovered">Buy</a>
+            <!-- Color: {{changeColor}} -->
+            <a routerLink="buy" (colorEvent)="receiveColor($event)" class="btn btn-success hovered">Buy</a>
           </div>
         </div>
 
     </div>
   </div>
-</div>

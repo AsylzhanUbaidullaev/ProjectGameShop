@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountsComponent implements OnInit {
 
+  searchAcc = ''
   constructor() { }
   accounts = [
     {th: 'TH9', price: '25$', image: 'https://clash-service.ru/img/products/town-hall-9.png'},
@@ -19,4 +20,9 @@ export class AccountsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  changeColor = "not change"
+
+  receiveColor($event) {
+    this.changeColor = $event
+  }
 }

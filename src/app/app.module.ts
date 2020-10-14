@@ -6,8 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContentComponent } from "./components/content/content.component";
 
-import { FormComponent } from './components/form/form.component';
-import { FormsModule } from "@angular/forms";
+// import { FormComponent } from './components/form/form.component';
+// import { FormsModule } from "@angular/forms";
 import { SellingComponent } from './components/selling/selling.component';
 import { CocSellingComponent } from './components/coc-selling/coc-selling.component';
 import { CrSellingComponent } from './components/cr-selling/cr-selling.component';
@@ -19,6 +19,11 @@ import { ClashroyaleComponent } from './components/clashroyale/clashroyale.compo
 import { BrawlstarsComponent } from './components/brawlstars/brawlstars.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { AccountsComponent } from './components/accounts/accounts.component';
+import { SellingAccountComponent } from './components/selling-account/selling-account.component';
+import { SearchPipe } from "./components/accounts/search.pipe";
+import { HoverDirective } from "./components/accounts/hover.directive";
+import { BuyAccComponent } from './components/buy-acc/buy-acc.component';
+
 
 const appRoutes: Routes = [
   {path: '', component: ContentComponent },
@@ -30,14 +35,15 @@ const appRoutes: Routes = [
   {path: 'signin', component: SigninComponent},
   {path: 'clashofclans', component: ClashofclansComponent},
   {path: 'clashroyale', component: ClashroyaleComponent},
-  {path: 'brawlstars', component: BrawlstarsComponent}
+  {path: 'brawlstars', component: BrawlstarsComponent},
+  {path: 'buy', component: BuyAccComponent}
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     ContentComponent,
-    FormComponent,
+    // FormComponent,
     SellingComponent,
     CocSellingComponent,
     CrSellingComponent,
@@ -48,12 +54,16 @@ const appRoutes: Routes = [
     ClashroyaleComponent,
     BrawlstarsComponent,
     CarouselComponent,
-    AccountsComponent
+    AccountsComponent,
+    SellingAccountComponent,
+    SearchPipe,
+    HoverDirective,
+    BuyAccComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

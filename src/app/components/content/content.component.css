@@ -4,6 +4,8 @@
 }
 h1 {
   text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 .img {
   text-align: center;
@@ -18,7 +20,7 @@ ul {
 
 ul li {
 	list-style: none;
-	margin-left: 100px;
+	margin-left: 50px;
   margin-bottom: 70px;
   padding: 20px;
 	transition: 0.5s;

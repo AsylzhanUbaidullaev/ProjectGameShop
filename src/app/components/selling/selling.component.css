@@ -1,9 +1,11 @@
 .container {
   width: 800px;
   margin: 0 auto;
+  padding-top: 30px;
 }
 h1 {
   text-align: center;
+  margin-bottom: 50px;
 }
 ul {
 	margin: 0;

@@ -23,7 +23,7 @@ export class ContentComponent implements OnInit {
 
   constructor() { }
 
-  addGame = 'Add Game'
+  // addGame = 'Add Game'
 
   ngOnInit(): void {
     setTimeout(() => {
