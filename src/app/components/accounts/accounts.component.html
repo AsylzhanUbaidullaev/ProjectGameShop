@@ -1,24 +1,20 @@
-<span *ngFor="let acc of accounts | search:searchAcc" [account]="acc">
-  <form class="form-inline mt-2 mt-md-0">
-    <input class="form-control mr-sm-2" type="text" placeholder="Search account" aria-label="Search" [(ngModel)]="searchAcc">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
-</span>
+<div class="row">
+    <input class="form-control mr-sm-2" placeholder="Search account" aria-label="Search" [(ngModel)]="SearchAcc">
+</div>
 
 
-
-
+<section style="height: 30px;"></section>
 
   <div class="row">
-    <div class="col-3" *ngFor="let account of accounts" appHover style="padding: 4%">
+    <div class="col-3" *ngFor="let acc of accounts | search:SearchAcc" appHover style="padding: 4%">
 
         <div class="card bg-dark text-white-50" style="width: 140%;">
-          <img class="card-img-top" [src]="account.image" alt="Card image cap">
+          <img class="card-img-top" [src]="acc.image" alt="Card image cap">
           <div class="card-body">
             <div class="card-img-overlay">
-                <h5 class="card-title d-none d-lg-inline">{{account.th}}</h5>
+                <h5 class="card-title d-none d-lg-inline">{{acc.th}}</h5>
             </div>
-            <p class="card-text d-none d-lg-inline ">Price: {{account.price}} </p><br>
+            <p class="card-text d-none d-lg-inline ">Price: {{acc.price}} </p><br>
             <br>
             <!-- Color: {{changeColor}} -->
             <a routerLink="buy" (colorEvent)="receiveColor($event)" class="btn btn-success hovered">Buy</a>
