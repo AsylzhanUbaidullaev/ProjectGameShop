@@ -9,17 +9,8 @@
   <section>
     <div *ngIf='toggle'>
       <ul>
-        <!-- <li *ngFor="let i of games; let j=index">
-          <a [ngClass]="{class:true}" routerLink="{{i}}">{{i | slice:1:11}}</a>
-        </li> -->
-        <li>
-          <a routerLink="clashofclans">{{game1 | uppercase}}</a>
-        </li>
-        <li>
-          <a routerLink="clashroyale">{{game2 | uppercase}}</a>
-        </li>
-        <li>
-          <a routerLink="brawlstars">{{game3 | uppercase}}</a>
+        <li *ngFor="let list of games">
+          <a routerLink="{{list.routerLinkGames}}">{{list.name}}</a>
         </li>
       </ul>
     </div>

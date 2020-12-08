@@ -1,14 +1,8 @@
 <div class="container">
   <h1>Which game account do you want  to sell?</h1>
   <ul>
-    <li>
-      <a routerLink="/selling/cocSelling">{{game1}}</a>
-    </li>
-    <li>
-      <a routerLink="/selling/crSelling">{{game2}}</a>
-    </li>
-    <li>
-      <a routerLink="/selling/bsSelling">{{game3}}</a>
+    <li *ngFor="let list of games">
+      <a routerLink="{{list.routerLinkSelling}}">{{list.name}}</a>
     </li>
   </ul>
 </div>

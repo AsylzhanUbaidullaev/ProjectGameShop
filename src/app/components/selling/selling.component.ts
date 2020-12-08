@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {DataService} from '../../services/data.service';
+import {User} from '../../user';
 
 
 @Component({
@@ -7,13 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./selling.component.css']
 })
 export class SellingComponent implements OnInit {
-  game1 = "Clash of clans"
-  game2 = "Clash Royale"
-  game3 = "Brawl Stars"
+  games: any[] = [];
+  id: string;
+  name: string;
+  routerLinkSelling: string;
+  routerLinkGames: string;
 
-  constructor() { }
+  constructor(private dataService: DataService) {
+  }
 
   ngOnInit(): void {
+    this.dataService.getGames().subscribe((data: User) => this.games = data["Games"]);
   }
 
 }

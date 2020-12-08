@@ -1,6 +1,4 @@
-.container {
-  width: 800px;
-}
+
 img {
   padding-top: 50px;
 }
@@ -13,4 +11,7 @@ img {
   box-shadow: 0 0 2px rgba(0 , 0 , 0, 0.1);
   transition: .5s all;
   z-index: 10;
+}
+input {
+  margin-top: 30px;
 }

@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "email": "asylzhan18092001@gmail.com",
+      "password": "123qwe"
+    },
+    {
+      "email": "tom123@gmail.com",
+      "password": "456rty"
+    },
+    {
+      "email": "arlan@gmail.com",
+      "password": "789uio"
+    }
+  ],
+  "Games": [
+    {
+      "id": 1,
+      "name": "Clash of Clans",
+      "routerLinkSelling": "/selling/coc",
+      "routerLinkGames": "/clashofclans"
+    },
+    {
+      "id": 2,
+      "name": "Clash Royale",
+      "routerLinkSelling": "/selling/cr",
+      "routerLinkGames": "/clashroyale"
+    },
+    {
+      "id": 3,
+      "name": "Brawl Stars",
+      "routerLinkSelling": "/selling/bs",
+      "routerLinkGames": "/brawlstars"
+    }
+  ],
+
+  "Accounts":[
+    {
+      "th": 9,
+      "price": "25$",
+      "image": "https://clash-service.ru/img/products/town-hall-9.png"
+    },
+    {
+      "th": 10,
+      "price": "40$",
+      "image": "https://clash-service.ru/img/products/town-hall-10.png"
+    },
+    {
+      "th": 11,
+      "price": "70$",
+      "image": "https://clash-service.ru/img/products/town-hall-11.png"
+    },
+    {
+      "th": 12,
+      "price": "120$",
+      "image": "https://clash-service.ru/img/products/town-hall-12.png"
+    },
+    {
+      "th": 13,
+      "price": "170$",
+      "image": "https://clash-service.ru/img/products/town-hall-13.png"
+    }
+  ]
+}
