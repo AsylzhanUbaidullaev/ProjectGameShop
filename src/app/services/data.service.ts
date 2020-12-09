@@ -11,14 +11,6 @@ export class DataService {
   constructor(private http: HttpClient, private logService: LogService) {
   }
 
-  // private accounts = [
-  //   {th: 'TH9', price: '25$', image: 'https://clash-service.ru/img/products/town-hall-9.png'},
-  //   {th: 'TH10', price: '40$', image: 'https://clash-service.ru/img/products/town-hall-10.png'},
-  //   {th: 'TH11', price: '70$', image: 'https://clash-service.ru/img/products/town-hall-11.png'},
-  //   {th: 'TH12', price: '120$', image: 'https://clash-service.ru/img/products/town-hall-12.png'},
-  //   {th: 'TH13', price: '170$', image: 'https://clash-service.ru/img/products/town-hall-13.png'},
-  // ];
-
   private users = [];
 
   // tslint:disable-next-line:typedef
@@ -47,10 +39,10 @@ export class DataService {
   }
 
   // tslint:disable-next-line:typedef
-  addUsers(user: User) {
+  addUsers(email: string, password: string) {
     this.logService.write('User added');
-    // this.users.push(email, password);
-    const body = {email: user.email, password: user.password};
-    return this.http.post('http://localhost:3000/users', body);
+    this.users.push(email, password);
+    // const body = {email: user.email, password: user.password};
+    // return this.http.post('http://localhost:3000/users', body);
   }
 }

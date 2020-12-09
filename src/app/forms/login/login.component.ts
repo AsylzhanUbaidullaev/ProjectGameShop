@@ -11,24 +11,23 @@ import {User} from '../../user';
 export class LoginComponent implements OnInit {
   user: User = new User();
   receivedUser: User;
-  done: boolean = false;
-  polzovateli: any[] = [];
+  done = false;
+  polzovateli: string[] = [];
   email: string;
   password: string;
   constructor(private dataService: DataService) { }
-
   // tslint:disable-next-line:typedef
-  // addPolzovatel(email: string, password: string) {
-  //   this.dataService.addUsers(email, password);
-  // }
-  // tslint:disable-next-line:typedef
-  submit(user: User){
-    this.dataService.addUsers(user)
-      .subscribe(
-        (data: User) => {this.receivedUser = data; this.done = true; },
-        error => console.log(error)
-      );
+  addPolzovatel(email: string, password: string) {
+    this.dataService.addUsers(email, password);
   }
+
+  // submit(user: User){
+  //   this.dataService.addUsers(user)
+  //     .subscribe(
+  //       (data: User) => {this.receivedUser = data; this.done = true; },
+  //       error => console.log(error)
+  //     );
+  // }
 
   loginForm = new FormGroup({
     email: new FormControl(),

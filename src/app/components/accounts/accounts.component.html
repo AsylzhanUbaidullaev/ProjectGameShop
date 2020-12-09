@@ -1,42 +1,16 @@
 <div class="row">
-<<<<<<< Updated upstream
-    <input class="form-control mr-sm-2" placeholder="Search account" aria-label="Search" [(ngModel)]="SearchAcc">
-</div>
-=======
   <input class="form-control mr-sm-2" placeholder="Search account" aria-label="Search" [(ngModel)]="SearchAcc">
 </div>
 
-
 <section style="height: 30px;"></section>
->>>>>>> Stashed changes
 
 <div class="row">
-  <div class="col-3" *ngFor="let acc of account | search:SearchAcc" appHover style="padding: 4%">
-
-<<<<<<< Updated upstream
-<section style="height: 30px;"></section>
-
-  <div class="row">
-    <div class="col-3" *ngFor="let acc of accounts | search:SearchAcc" appHover style="padding: 4%">
-
-        <div class="card bg-dark text-white-50" style="width: 140%;">
-          <img class="card-img-top" [src]="acc.image" alt="Card image cap">
-          <div class="card-body">
-            <div class="card-img-overlay">
-                <h5 class="card-title d-none d-lg-inline">{{acc.th}}</h5>
-            </div>
-            <p class="card-text d-none d-lg-inline ">Price: {{acc.price}} </p><br>
-            <br>
-            <!-- Color: {{changeColor}} -->
-            <a routerLink="buy" (colorEvent)="receiveColor($event)" class="btn btn-success hovered">Buy</a>
-          </div>
-=======
+  <div class="col-3" *ngFor="let acc of accounts | search:SearchAcc" appHover style="padding: 4%">
     <div class="card bg-dark text-white-50" style="width: 140%;">
       <img class="card-img-top" [src]="acc.image" alt="Card image cap">
       <div class="card-body">
         <div class="card-img-overlay">
           <h2>{{acc.th}}</h2>
->>>>>>> Stashed changes
         </div>
         <p>Price: {{acc.price}}</p>
         <br>
